@@ -161,6 +161,12 @@ namespace CineFront.Vistas
             //Validar
         }
 
-
+        private void picCerrar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Está seguro que desea salir?", "Salir..", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
     }
 }

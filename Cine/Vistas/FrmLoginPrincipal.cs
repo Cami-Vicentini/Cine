@@ -21,7 +21,7 @@ namespace CineFront
         private void btnEntrarALaApp_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrmLogin menu = new FrmLogin();
+            FrmIniciarSesion menu = new FrmIniciarSesion();
             menu.FormClosed += CerrarFormPrincipal;
             menu.Show();
         }
@@ -48,7 +48,10 @@ namespace CineFront
 
         private void picCerrar_Click(object sender, EventArgs e)
         {
-            Close();
+            if (MessageBox.Show("¿Está seguro que desea salir del programa?", "Salir", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
 
         private void FrmLoginPrincipal_Load(object sender, EventArgs e)

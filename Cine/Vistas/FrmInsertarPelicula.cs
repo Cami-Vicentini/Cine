@@ -4,10 +4,10 @@ namespace CineFront2
 {
     public partial class FrmInsertarPelicula : Form
     {
-        private string[] genero = {"Terror","Accion", "Comedia", "Suspenso", "Ciencia Ficcion", "Drama" };
-        private string[] idioma = { "Ingles", "Español", "Subtitulada", "Chino"};
-        private string[] clasificacion = { "+13", "+15", "APT"};
-        private string[] sala = {"1", "2","3","4"};
+        private string[] genero = { "Terror", "Accion", "Comedia", "Suspenso", "Ciencia Ficcion", "Drama" };
+        private string[] idioma = { "Ingles", "Español", "Subtitulada", "Chino" };
+        private string[] clasificacion = { "+13", "+15", "APT" };
+        private string[] sala = { "1", "2", "3", "4" };
         Funcion nueva = null;
         public FrmInsertarPelicula()
         {
@@ -90,6 +90,35 @@ namespace CineFront2
             }
 
             return true;
+        }
+
+        private void cboGenero_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboIdioma_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void nudDuracion_ValueChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void dtpHora_ValueChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void dtpDia_ValueChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void picCerrar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Está seguro que desea salir?", "Salir..", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
     }
 }
